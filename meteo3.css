@@ -1,0 +1,25 @@
+#tb tr th{
+    padding: 8px 8px;
+    text-decoration: none;
+    color: white;
+    opacity: inherit;
+    /*background: #b3dced; 
+    background: -moz-linear-gradient(top,  #b3dced 0%, #29b8e5 48%, #50c3ed 100%);
+    background: -webkit-linear-gradient(top,  #b3dced 0%,#29b8e5 48%,#50c3ed 100%);
+    background: linear-gradient(to bottom,  #b3dced 0%,#29b8e5 48%,#50c3ed 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#50c3ed',GradientType=0 ); 
+    
+    border-right: 1px solid #1e5799;
+    border-left: 1px solid #2989d8;
+    border-bottom: 1px solid #232323;
+    */
+}
+
+#tb tr th:hover{
+    background: #99CCFF;
+    background: -noz-linear-gredient(top,#04082E,#0E1665);
+    background: -webkit-linear-gredient(top,#04082E,#0E1665);
+    background: -webkit-gredient(linear,left top,left bottom,from(#04082E),to (#0E1665));
+    background: -linear-gredient(top,#04082E, #0E1665);
+
+}
