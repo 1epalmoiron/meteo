@@ -19,7 +19,8 @@
 </head>
 <body id="bd">
 <h1 align='center'><strong>ΕΠΑΛ Μοιρων</strong></h1>
-<h2 align='center'>Δεδομένα Μετεωρολογικού</h2>
+<h2 align='center'> Δεδομένα Μετεωρολογικού</h2>
+
 <?php
 $servername = "localhost";
 $username = "meteo17";
@@ -69,7 +70,8 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 
-	<table id="img">
+	<table align="center" id="img">
+
 <?php
             $boutsitherm = floatval ($boutsitherm);
             $boutsitherm = ($boutsitherm - 32) * 5/9;
@@ -116,8 +118,7 @@ $conn->close();
         
 
        
-	</tr>
- 
+	</tr> 
         
         
         
@@ -159,51 +160,18 @@ $conn->close();
         
         
     <tr>
-    <td>
-        <?php
-            
-            
-            echo $aoureltherm;
-        ?>
-    </td>
-    <td>      
-	   <?php
-	        echo $xristinatherm;
-	   ?>
-   	</td>
-    <td>
-	   <?php
-        echo $kevtherm;
-
-	   ?>
-    </td>
-    <td>
-        <?php
-            echo $boutsitherm;
-		?>
-    </td>
-    <td>
-		<?php
-			echo $papadaktherm;
-		?></td>
-		<td><?php
-		 echo $nikostherm;
-		?>
-		</td>
-		<td>
-		<?php
-			echo $kapsalistherm;
-		?>
-		</td>
-		<td>
-		<?php
-			echo $giorgostherm;
-		?>
-		</td>
+    <td><?php    echo $aoureltherm; ?>   </td>
+    <td>  <?php    echo $xristinatherm; ?></td>
+    <td><?php   echo $kevtherm;     ?></td>
+    <td>    <?php   echo $boutsitherm;	?></td>
+    <td><?php	echo $papadaktherm;   ?> %</td>
+	<td><?php	 echo $nikostherm;	?></td>
+    <td><?php	echo $kapsalistherm;?></td>
+    <td>  <?php echo $giorgostherm;  ?></td>
+        </tr>   
         
         
-        
-        <table id='img'>
+        <table align="center" id='img'>
             <a href="meteohistory.php"><br><font size="5"> <center>History</center></font><br></a>
         
         <tr id='names'>
@@ -226,6 +194,7 @@ $conn->close();
         <td>Μπαταρια</td>
         <td>(Chill)καφεδακι κ ετσι</td>
         </tr>
+        
         <tr>
         <td>
             <?php
@@ -261,7 +230,8 @@ $conn->close();
 
         </tr>
         </table>
-        <a href="index.html"><font size="5"> <br><center>BACK</center></font></a>
+        
+	<a href="index.html"><font size="5"> <br><center>BACK</center></font></a>
 </tr>
 </table>
 </body>

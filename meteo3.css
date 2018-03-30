@@ -1,3 +1,13 @@
+body{
+	align: center;
+}
+html { 
+  background: url(https://i.imgur.com/D4xsMV9.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100%;
+}
 #tb tr th{
     padding: 8px 8px;
     text-decoration: none;
