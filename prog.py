@@ -50,7 +50,7 @@ def database(lex):
                 		                password="meteo17",
                         		        host="10.8.42.10",
                                 		database="gp_2017_2018")
-		except error:
+		except :
 			time.sleep(60)
         cursor = cnx.cursor()
 

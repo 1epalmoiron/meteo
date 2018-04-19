@@ -39,12 +39,14 @@ $papadaktherm=0;
 $nikostherm=0;
 $kapsalistherm=0;
 $giorgostherm=0;
+$charitakhstherm=0;
 $doulgetherm=0;
 $anastherm=0;
 $dionistherm=0;
 $xristtherm=0;
 $papadtherm=0;
 $kapsaltherm=0;
+$BR=0;
 $sql = "SELECT * FROM meteorologikos ORDER BY id DESC LIMIT 1";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
@@ -57,6 +59,7 @@ if ($result->num_rows > 0) {
 	$nikostherm=$row["BARO"];
 	$kapsalistherm=$row["wdir"];
 	$giorgostherm=$row["wind_speed"];
+    $charitakhstherm=$row["kles"];
 	$doulgetherm=$row["insects_of_rain"];
     $anastherm=$row["SRAD"];
     $dionistherm=$row["UV"];
@@ -71,11 +74,82 @@ $conn->close();
 ?>
 
 	<table align="center" id="img">
-
+<?php
+        $giorgostherm = floatval ($giorgostherm);
+        $giorgostherm = $giorgostherm * 1.609344;
+        $giorgostherm = round($giorgostherm , 1);
+        $charitakhstherm = floatval ($charitakhstherm);
+        ?>
 <?php
             $boutsitherm = floatval ($boutsitherm);
             $boutsitherm = ($boutsitherm - 32) * 5/9;
             $boutsitherm = intval ($boutsitherm);
+        ?>
+    <?php
+        /*
+        if ($charitakhstherm == 0){
+            BR=0;
+        }
+        ?>
+        <?php
+        elseif ($charitakhstherm <= 5){
+            BR=1;
+        }
+        ?>
+        <?php
+        elseif ($charitakhstherm <=11){
+            BR=2;
+        }
+        ?>
+        <?php
+        elseif ($charitakhstherm <=19){
+            BR=3;
+        }
+        ?>
+        <?php
+        elseif ($charitakhstherm <=28){
+            BR=4;
+        }
+        ?>
+        <?php
+        elseif ($charitakhstherm <=38){
+            BR=5;
+        }
+        ?>
+        <?php
+        elseif ($charitakhstherm <=49){
+            BR=6;
+        }
+        ?>
+        <?php
+        elseif ($charitakhstherm <=61){
+            BR=7;
+        }
+        ?>
+        <?php
+        elseif ($charitakhstherm <=74){
+            BR=8;
+        }
+        ?>
+        <?php
+        elseif ($charitakhstherm <=88){
+            BR=9;
+        }
+        ?>
+        <?php
+        elseif ($charitakhstherm <=102){
+            BR=10;
+        }f
+        ?>
+        <?php
+        elseif ($charitakhstherm <=117){
+            BR=11;
+        }
+        ?>
+        <?php
+        elseif ($charitakhstherm <118){
+            BR=12;
+        }*/
         ?>
     <tr>        
         <?php
